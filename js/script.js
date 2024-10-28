@@ -37,7 +37,7 @@ function publicarArticulo() {
 }
 
 function openWhatsApp() {
-  window.open("https://wa.me/5493513742796");
+  window.open("https://wa.me/5493515511900");
 
   // Cambia el número por el real
 }

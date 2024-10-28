@@ -80,19 +80,18 @@ img {
     color: #333; /* Color del texto */
 }
 
-/* Estilo del ícono de WhatsApp */
 .whatsapp-icon {
-    position: fixed; 
-    bottom: 20px; /* Distancia desde el fondo */
-    right: 20px; /* Distancia desde la izquierda */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp-icon img {
+    width: 40px; /* Tamaño reducido */
+    height: auto;
+    cursor: pointer;
 }
 
-.whatsapp-icon img {
-    width: 50px; /* Tamaño del ícono, ajústalo según tu necesidad */
-    height: auto; /* Mantiene la proporción */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-}
 
 /* Estilos adicionales para mejorar la estética */
 .card {
