@@ -1,0 +1,97 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Fuente general */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para la navegación */
+nav ul {
+    padding: 0; /* Elimina padding */
+    list-style: none; /* Elimina viñetas */
+}
+
+nav ul li {
+    display: inline; /* Horizontal */
+    margin: 0 15px; /* Espaciado entre elementos */
+}
+
+/* Estilos para las secciones */
+section {
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo de la galería */
+/* Estilos de la galería */
+.gallery {
+    display: flex; /* Utiliza flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: space-between; /* Espacios iguales entre imágenes */
+}
+
+.producto {
+    flex: 0 1 auto; /* Flexibilidad para adaptar el tamaño */
+    margin: 10px; /* Espaciado entre los productos */
+    max-width: calc(25% - 20px); /* Ajusta el ancho según tu diseño (4 elementos por fila en este caso) */
+    box-sizing: border-box; /* Incluye padding y márgenes en el ancho total */
+}
+
+.imagen-container img {
+    width: 100%; /* Las imágenes ocupan el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+
+.producto img {
+    max-width: 200px; /* Ancho máximo */
+    max-height: 200px; /* Alto máximo */
+    width: auto; /* Mantiene la proporción */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Estilo de las imágenes */
+img {
+    max-width: 100%; /* Asegura que no excedan el contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Estilo del título sobre la imagen */
+.title {
+    position: absolute; /* Superposición sobre la imagen */
+    top: 10px; /* Posición */
+    left: 0;
+    right: 0;
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    padding: 5px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilo de la descripción debajo de la imagen */
+.description {
+    margin-top: 10px; /* Espacio entre la imagen y la descripción */
+    font-size: 12px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo del ícono de WhatsApp */
+.whatsapp-icon {
+    position: fixed; 
+    
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px; /* Distancia desde la izquierda */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.whatsapp-icon img {
+    width: 50px; /* Tamaño del ícono, ajústalo según tu necesidad */
+    height: auto; /* Mantiene la proporción */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}

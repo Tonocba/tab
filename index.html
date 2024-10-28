@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiro con Arco Barrancas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tiro con Arco Barrancas</h1>
+        <nav>
+            <ul>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#escuela">Escuela</a></li>
+                <li><a href="#entrenador">Entrenador</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <div class="gallery">
+          <div class="producto">
+              <div class="imagen-container">
+                  <h3>Título 1</h3>
+                  <img src="/imagenes/producto1.jpg" alt="Producto 1">
+              </div>
+              <p>Descripción del producto 1.</p>
+          </div>
+          <div class="producto">
+              <div class="imagen-container">
+                  <h3>Título 2</h3>
+                  <img src="/imagenes/producto10.jpg" alt="Producto 2">
+              </div>
+              <p>Descripción del producto 2.</p>
+          </div>
+          <div class="producto">
+            <div class="imagen-container">
+                <h3>Título 2</h3>
+                <img src="/imagenes/producto10.jpg" alt="Producto 2">
+            </div>
+            <p>Descripción del producto 2.</p>
+        </div>
+          <!-- Agrega más productos según sea necesario -->
+      </div>
+
+        </section>
+    
+    <section id="blog">
+        <h2>Blog</h2>
+        <div id="editor" style="display:none;">
+            <h3>Nuevo Artículo</h3>
+            <textarea id="articuloTexto"></textarea>
+            <button onclick="publicarArticulo()">Publicar</button>
+        </div>
+        <div id="articulos">
+            <!-- Aquí se mostrarán los artículos -->
+        </div>
+    </section>
+
+    <section id="escuela">
+        <h2>Escuela de Tiro</h2>
+        <p>Ubicación, horarios, costos y metodología.</p>
+    </section>
+    
+    <section id="entrenador">
+        <h2>Entrenador</h2>
+        <p>Información sobre el entrenador.</p>
+    </section>
+    <div class="whatsapp-icon">
+      <a href="https://wa.me/5493513742796" target="_blank">
+          <img src="/imagenes/whatsapp-icon.png" alt="WhatsApp">
+      </a>
+  </div>
+    <footer>
+        <p>Contacto: <a href="mailto:info@tiroconarco.com">info@tiroconarco.com</a></p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
