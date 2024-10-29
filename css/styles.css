@@ -7,7 +7,7 @@ body {
 
 /* Estilos para el encabezado */
 header {
-    background-color: #4CAF50; /* Color de fondo del encabezado */
+    background-color: #4ca3af; /* Color de fondo del encabezado */
     color: white; /* Color del texto */
     padding: 10px; /* Espaciado interno */
     text-align: center; /* Centra el texto */
@@ -29,31 +29,34 @@ section {
     padding: 20px; /* Espaciado interno */
 }
 
-/* Estilo de la galería */
+/* Estilos para la galería */
 .gallery {
-    display: flex; /* Utiliza flexbox */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-    justify-content: space-around; /* Espacios iguales entre imágenes */
+    display: flex; /* Activamos Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
+    justify-content: space-around; /* Espacio uniforme entre productos */
+    padding: 20px; /* Espaciado alrededor */
+    gap: 20px; /* Espacio entre los elementos */
 }
 
+/* Estilos de cada producto */
 .producto {
-    flex: 0 1 auto; /* Flexibilidad para adaptar el tamaño */
-    margin: 10px; /* Espaciado entre los productos */
-    max-width: calc(25% - 20px); /* Ajusta el ancho según tu diseño (4 elementos por fila en este caso) */
-    box-sizing: border-box; /* Incluye padding y márgenes en el ancho total */
+    flex: 1 1 200px; /* Crece y se reduce con un tamaño mínimo de 200px */
+    max-width: 250px; /* Ancho máximo para los productos */
+    border: 1px solid #ddd; /* Borde alrededor del producto */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que el contenido se ajuste dentro */
+    text-align: center; /* Centra el contenido */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-.imagen-container img {
-    width: 100%; /* Las imágenes ocupan el ancho del contenedor */
-    height: auto; /* Mantiene la proporción */
-}
-
+/* Estilo de las imágenes dentro de cada producto */
 .producto img {
-    max-width: 200px; /* Ancho máximo */
-    max-height: 200px; /* Alto máximo */
-    width: auto; /* Mantiene la proporción */
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
     height: auto; /* Mantiene la proporción */
+    max-height: 200px; /* Altura máxima para limitar tamaño */
 }
+
 
 /* Estilo de las imágenes */
 img {
