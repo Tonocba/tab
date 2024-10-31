@@ -1,128 +1,126 @@
 /* Estilos generales del cuerpo */
 body {
-    font-family: Arial, sans-serif; /* Fuente general */
-    margin: 0; /* Elimina el margen por defecto */
-    padding: 0; /* Elimina el padding por defecto */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilos para el encabezado */
 header {
-    background-color: #4ca3af; /* Color de fondo del encabezado */
-    color: white; /* Color del texto */
-    padding: 10px; /* Espaciado interno */
-    text-align: center; /* Centra el texto */
+    background-color: #4ca3af;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 /* Estilos para la navegación */
 nav ul {
-    padding: 0; /* Elimina padding */
-    list-style: none; /* Elimina viñetas */
+    padding: 0;
+    list-style: none;
 }
 
 nav ul li {
-    display: inline; /* Horizontal */
-    margin: 0 15px; /* Espaciado entre elementos */
+    display: inline;
+    margin: 0 15px;
 }
 
 /* Estilos para las secciones */
 section {
-    padding: 20px; /* Espaciado interno */
+    padding: 20px;
 }
 
-/* Estilos para la galería */
+/* Galería de productos */
 .gallery {
-    display: flex; /* Activamos Flexbox */
-    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
-    justify-content: space-around; /* Espacio uniforme entre productos */
-    padding: 20px; /* Espaciado alrededor */
-    gap: 20px; /* Espacio entre los elementos */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
 }
 
-/* Estilos de cada producto */
+/* Configuración de productos en la galería */
 .producto {
-    flex: 1 1 200px; /* Crece y se reduce con un tamaño mínimo de 200px */
-    max-width: 250px; /* Ancho máximo para los productos */
-    border: 1px solid #ddd; /* Borde alrededor del producto */
-    border-radius: 5px; /* Bordes redondeados */
-    overflow: hidden; /* Asegura que el contenido se ajuste dentro */
-    text-align: center; /* Centra el contenido */
-    padding: 10px; /* Espaciado interno */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    flex: 1 1 calc(25% - 20px); /* Tamaño adaptable para 1/6 del ancho */
+    max-width: calc(25% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
 }
 
-/* Estilo de las imágenes dentro de cada producto */
-.producto img {
-    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
-    height: auto; /* Mantiene la proporción */
-    max-height: 200px; /* Altura máxima para limitar tamaño */
+/* Configuración del carrusel dentro de cada producto */
+.producto .carousel {
+    width: 100%;
+    height: auto;
 }
 
-
-/* Estilo de las imágenes */
-img {
-    max-width: 100%; /* Asegura que no excedan el contenedor */
-    height: auto; /* Mantiene la proporción */
+.producto .carousel-inner img {
+    width: 100%; /* Imagenes llenan el contenedor */
+    height: auto; /* Mantienen su proporción */
 }
 
-/* Estilo del título sobre la imagen */
+/* Título superpuesto sobre la imagen */
 .title {
-    position: absolute; /* Superposición sobre la imagen */
-    top: 10px; /* Posición */
+    position: absolute;
+    top: 10px;
     left: 0;
     right: 0;
-    color: white; /* Color del texto */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-    padding: 5px; /* Espaciado interno */
-    font-size: 14px; /* Tamaño de fuente */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
 }
 
-/* Estilo de la descripción debajo de la imagen */
+/* Descripción de cada producto */
 .description {
-    margin-top: 10px; /* Espacio entre la imagen y la descripción */
-    font-size: 12px; /* Tamaño de fuente */
-    color: #333; /* Color del texto */
+    font-size: 12px;
+    color: #333;
+    margin-top: 10px;
 }
 
+/* Icono de WhatsApp */
 .whatsapp-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
 }
+
 .whatsapp-icon img {
-    width: 40px; /* Tamaño reducido */
+    width: 40px;
     height: auto;
     cursor: pointer;
 }
 
-
-/* Estilos adicionales para mejorar la estética */
+/* Estilos adicionales */
 .card {
-    border: 1px solid #ddd; /* Borde de la tarjeta */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-    margin-bottom: 20px; /* Espaciado inferior */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .card-body {
-    padding: 15px; /* Espaciado interno */
+    padding: 15px;
 }
 
 textarea.form-control {
-    border-radius: 5px; /* Bordes redondeados */
-    border: 1px solid #ddd; /* Borde */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 button.btn-primary {
-    background-color: #007bff; /* Color de fondo */
-    border-color: #007bff; /* Color del borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de fuente */
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
 button.btn-primary:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el ratón */
-    border-color: #0056b3; /* Color del borde al pasar el ratón */
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
