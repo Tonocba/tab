@@ -133,6 +133,24 @@ button.btn-primary:hover {
     border-color: #0056b3;
 }
 
+  /* Estilos para la barra sobre la imagen */
+  .info-barra-diagonal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.5); /* Color negro translúcido */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transform: skewY(-10deg); /* Inclinación de la barra */
+    transform-origin: bottom left;
+}
+
 @media (max-width: 600px) {
     .producto {
         flex: 1 1 calc(100% - 20px); /* Tamaño adaptable para 1/4 del ancho */

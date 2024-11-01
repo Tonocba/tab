@@ -43,5 +43,6 @@ function openWhatsApp() {
 }
 
 
+
 // Exportar funciones si es necesario (opcional)
-export { iniciarSesion, publicarArticulo, openWhatsApp };
+export { iniciarSesion, publicarArticulo, openWhatsApp, cargarPrecioDesdeSheets };
