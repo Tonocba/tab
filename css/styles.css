@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 /* Estilos para el encabezado */
@@ -149,6 +150,25 @@ button.btn-primary:hover {
     padding-left: 10px;
     transform: skewY(-10deg); /* Inclinación de la barra */
     transform-origin: bottom left;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp-icon img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+.price {
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 8px;
 }
 
 @media (max-width: 600px) {
