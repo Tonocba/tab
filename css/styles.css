@@ -92,13 +92,13 @@ section {
 /* Icono de WhatsApp */
 .whatsapp-icon {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     z-index: 1000;
 }
 
 .whatsapp-icon img {
-    width: 40px;
+    width: 50px;
     height: auto;
     cursor: pointer;
 }
@@ -152,6 +152,13 @@ button.btn-primary:hover {
     transform-origin: bottom left;
 }
 
+.price {
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 8px;
+}
+
+
 .whatsapp-icon {
     position: fixed;
     bottom: 20px;
@@ -163,22 +170,27 @@ button.btn-primary:hover {
     height: auto;
     cursor: pointer;
 }
-
-
-.price {
+.encuesta-btn {
+    background-color: #ffcc00; /* Cambiar color del botón para la encuesta */
+    color: #000; /* Color del texto */
     font-weight: bold;
-    color: #28a745;
-    margin-top: 8px;
 }
+
 
 @media (max-width: 600px) {
     .producto {
         flex: 1 1 calc(100% - 20px); /* Tamaño adaptable para 1/4 del ancho */
         max-width: calc(100% - 20px);}
   }
+  .info-barra-diagonal {
+    font-size: 0.5rem;
+  }
   
   @media (max-width: 990px) {
     .producto {
         flex: 1 1 calc(50% - 20px); /* Tamaño adaptable para 1/4 del ancho */
         max-width: calc(50% - 20px);}
+  }
+     .info-barra-diagonal {
+    font-size: 1rem;
   }
