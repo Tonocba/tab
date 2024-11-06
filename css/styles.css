@@ -158,18 +158,6 @@ button.btn-primary:hover {
     margin-top: 8px;
 }
 
-
-.whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-.whatsapp-icon img {
-    width: 40px;
-    height: auto;
-    cursor: pointer;
-}
 .encuesta-btn {
     background-color: #ffcc00; /* Cambiar color del botón para la encuesta */
     color: #000; /* Color del texto */
