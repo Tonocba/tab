@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/react"
+
 async function cargarPrecioDesdeSheets(range, elementId) {
     const sheetId = '1hXttbtbC67UcCNikJZq9trBtkxaIopg6Oaq0bFzwyf8';
     const apiKey = 'AIzaSyAcuSCT6Z_lR54bD9xvj9R7ZbFS_rnNNoY'; // Reemplaza con tu clave API
