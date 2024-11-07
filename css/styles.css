@@ -3,31 +3,75 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    
+    background-color: #f8f9fa; /* Fondo claro para contraste */
 }
 
-/* Estilos para el encabezado */
-header {
-    background-color: #4ca3af;
-    color: white;
-    padding: 10px;
-    text-align: center;
+/* Fondo del encabezado con desenfoque */
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.7)), url('/imagenes/blanco.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Desenfoque en el fondo */
+    z-index: 1;
 }
 
-/* Estilos para la navegación */
-nav ul {
-    padding: 0;
-    list-style: none;
+/* Contenido del encabezado */
+.header-content {
+    position: relative;
+    z-index: 3; /* Asegura que el contenido esté por encima del fondo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
 }
 
-nav ul li {
-    display: inline;
+.logo-img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Botón de encuesta */
+.encuesta-btn {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* Estilo de la navegación */
+/* Barra de navegación */
+.navbar {
+    position: relative;
+    z-index: 4; /* Asegura que esté por encima de la cabecera */
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Añade sombra para separar visualmente */
+    margin-top: 5px;
+}
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: bold;
     margin: 0 15px;
 }
 
-/* Estilos para las secciones */
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Secciones con fondo blanco */
 section {
-    padding: 20px;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Galería de productos */
@@ -40,7 +84,7 @@ section {
 
 /* Configuración de productos en la galería */
 .producto {
-    flex: 1 1 calc(25% - 20px); /* Tamaño adaptable para 1/4 del ancho */
+    flex: 1 1 calc(25% - 20px);
     max-width: calc(25% - 20px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
@@ -57,11 +101,11 @@ section {
 }
 
 .producto .carousel-inner img {
-    width: 100%; /* Imagenes llenan el contenedor */
-    height: auto; /* Mantienen su proporción */
+    width: 100%;
+    height: auto;
 }
 
-/* Título superpuesto sobre la imagen */
+/* Título sobre la imagen en la galería */
 .title {
     position: absolute;
     top: 10px;
@@ -74,53 +118,38 @@ section {
     text-align: center;
 }
 
-/* Descripción de cada producto */
+/* Descripción y precio de los productos */
 .description {
-    font-size: 12px;
-    color: #333;
+    font-size: 14px;
+    color: #555;
     margin-top: 10px;
 }
 
-/* Aclaración importante en la descripcion */
-.aclaracion {
-    font-size: 13px;
+.price {
     font-weight: bold;
-    color: #333;
-    margin-top: 10px;
+    color: #28a745;
+    margin-top: 8px;
 }
 
-/* Icono de WhatsApp */
-.whatsapp-icon {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 1000;
+/* Barra de información en diagonal sobre la imagen */
+.info-barra-diagonal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transform: skewY(-10deg);
+    transform-origin: bottom left;
 }
 
-.whatsapp-icon img {
-    width: 50px;
-    height: auto;
-    cursor: pointer;
-}
-
-/* Estilos adicionales */
-.card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.card-body {
-    padding: 15px;
-}
-
-textarea.form-control {
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
+/* Botones de acción */
 button.btn-primary {
     background-color: #007bff;
     border-color: #007bff;
@@ -134,51 +163,53 @@ button.btn-primary:hover {
     border-color: #0056b3;
 }
 
-  /* Estilos para la barra sobre la imagen */
-  .info-barra-diagonal {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    background: rgba(0, 0, 0, 0.5); /* Color negro translúcido */
+/* Icono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
     color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    transform: skewY(-10deg); /* Inclinación de la barra */
-    transform-origin: bottom left;
+    padding: 20px 0;
+    text-align: left;
 }
 
-.price {
-    font-weight: bold;
-    color: #28a745;
-    margin-top: 8px;
+.footer a {
+    color: #ffcc00;
 }
 
-.encuesta-btn {
-    background-color: #ffcc00; /* Cambiar color del botón para la encuesta */
-    color: #000; /* Color del texto */
-    font-weight: bold;
+.footer a:hover {
+    color: #ffc107;
 }
 
-
+/* Media queries */
 @media (max-width: 600px) {
     .producto {
-        flex: 1 1 calc(100% - 20px); /* Tamaño adaptable para 1/4 del ancho */
-        max-width: calc(100% - 20px);}
-  }
-  .info-barra-diagonal {
-    font-size: 0.5rem;
-  }
-  
-  @media (max-width: 990px) {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+    .info-barra-diagonal {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 990px) {
     .producto {
-        flex: 1 1 calc(50% - 20px); /* Tamaño adaptable para 1/4 del ancho */
-        max-width: calc(50% - 20px);}
-  }
-     .info-barra-diagonal {
-    font-size: 1rem;
-  }
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    .info-barra-diagonal {
+        font-size: 1rem;
+    }
+}

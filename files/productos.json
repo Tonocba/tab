@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "Nock",
+        "precio": "$15000",
+        "carpeta_imagenes": "producto1",
+        "descripcion": "Arco recurvo de alta precisión para principiantes y expertos."
+    },
+    {
+        "nombre": "Timones",
+        "precio": "$25000",
+        "carpeta_imagenes": "producto2",
+        "descripcion": "Arco compuesto ideal para competencias avanzadas."
+    },
+    {
+        "nombre": "Flechas Profesionales",
+        "precio": "$8000",
+        "carpeta_imagenes": "producto3",
+        "descripcion": "Flechas de carbono diseñadas para alto rendimiento."
+    }
+]

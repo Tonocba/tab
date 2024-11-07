@@ -9,46 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubicación y Contacto - Tiro con Arco Barranca</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
 </head>
 <body>
-    <header class="bg-success text-white text-center py-3">
-        <h1>Ubicación y Contacto</h1>
-    </header>
+    <div id="header-placeholder"></div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Tiro con Arco Barranca</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/catalogo.html">Catálogo de Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/clases.html">Clases y Entrenador</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="iniciarSesion()">Iniciar Sesión</a>
-                </li> -->
-            </ul>
-        </div>
-    </nav>
 
-    <section class="container mt-4">
-        <p>Dirección: Calle Falsa 123, Ciudad, País</p>
-        <p>Teléfono: +123 456 7890</p>
-        <p>Email: contacto@tiroconarco.com</p>
+     <section class="container mt-4">
+        <p>Dirección: Hornero 888, Córdoba, Argentina</p>
+        <p>Teléfono: <a href="https://wa.me/5493515511900">+5493515511900</a></p>
+        <p>Email: contacto@tiroconarcobarrancas.com.ar</p>
         <!-- Añade un mapa o más información de contacto aquí -->
     </section>
-
+ 
+    <div id="footer-placeholder"></div>
+    <script>
+        // Cargar header y footer
+        async function loadPartial(id, url) {
+            const response = await fetch(url);
+            const text = await response.text();
+            document.getElementById(id).innerHTML = text;
+        }
+        loadPartial("header-placeholder", "/partials/header.html");
+        loadPartial("footer-placeholder", "/partials/footer.html");
+    </script>
     <div class="whatsapp-icon">
         <a href="https://wa.me/5493515511900" target="_blank" class="btn btn-success" style="display: flex; align-items: center; text-decoration: none;">
             <img src="/imagenes/whatsapp-icon.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-right: 0px;">
-           </a>
+        </a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

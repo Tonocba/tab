@@ -15,33 +15,9 @@
     </style>
 </head>
 <body>
-    <header class="bg-success text-white text-center py-3">
-        <h1>Tiro con Arco Barranca</h1>
-    </header>
+    <div id="header-placeholder"></div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/index.html">Tiro con Arco Barranca</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/catalogo.html">Catálogo de Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/clases.html">Clases y Entrenador</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/ubicacion.html">Ubicación y Contacto</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="iniciarSesion()">Iniciar Sesión</a>
-                </li> -->
-            </ul>
-        </div>
-    </nav>
-
+    
     <section class="container mt-4 gallery">
         <!-- Ejemplo de un producto con un carrusel -->
         <div class="producto">
@@ -244,7 +220,18 @@
         </div>
         <!-- Añadir más productos aquí -->
     </section>
-
+ <!-- Footer -->
+ <div id="footer-placeholder"></div>
+ <script>
+     // Cargar header y footer
+     async function loadPartial(id, url) {
+         const response = await fetch(url);
+         const text = await response.text();
+         document.getElementById(id).innerHTML = text;
+     }
+     loadPartial("header-placeholder", "/partials/header.html");
+     loadPartial("footer-placeholder", "/partials/footer.html");
+ </script>
     <div class="whatsapp-icon">
         <a href="https://wa.me/5493515511900" target="_blank" class="btn btn-success" style="display: flex; align-items: center; text-decoration: none;">
             <img src="/imagenes/whatsapp-icon.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-right: 0px;">
