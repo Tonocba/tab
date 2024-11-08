@@ -7,16 +7,7 @@ import 'bootstrap';
 
 let loggedIn = false;
 
-// Función para iniciar sesión
-function iniciarSesion() {
-    const usuario = prompt("Ingrese el nombre de usuario:");
-    if (usuario === usuarioEspecial) {
-        loggedIn = true;
-        document.getElementById("editor").style.display = "block";
-    } else {
-        alert("Usuario no autorizado");
-    }
-}
+
 
 // Función para publicar un artículo
 function publicarArticulo() {
@@ -42,7 +33,27 @@ function openWhatsApp() {
   window.open(url, "_blank"); // Abrir en una nueva pestaña
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los botones "Leer más"
+    const toggleButtons = document.querySelectorAll('.toggle-content');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Selecciona el siguiente elemento, que es el contenido del blog
+            const content = button.nextElementSibling;
+
+            // Alterna la visualización del contenido
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                button.textContent = 'Leer menos';
+            } else {
+                content.style.display = 'none';
+                button.textContent = 'Leer más';
+            }
+        });
+    });
+});
 
 
 // Exportar funciones si es necesario (opcional)
-export { iniciarSesion, publicarArticulo, openWhatsApp, cargarPrecioDesdeSheets };
+export { publicarArticulo, openWhatsApp, cargarPrecioDesdeSheets,  };

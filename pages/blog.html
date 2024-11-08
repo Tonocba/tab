@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/imagenes/iconos/apple-touch-icon.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Tiro con Arco Barranca</title>
+    <title>Tiro con Arco Barranca</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
 
@@ -15,11 +15,39 @@
 <body>
     <div id="header-placeholder"></div>
 
+    <!-- Contenido del Blog -->
     <section class="container mt-4">
-        <p>Artículos del Blog</p>
-        <!-- Añade más contenido aquí -->
+        <h2 class="text-center">Blog de Novedades</h2>
+        <div class="blog-container">
+
+                 <!-- Nueva Publicación -->
+            <div class="blog-card">
+                <img src="/imagenes/blog/concentracion.PNG" alt="">
+                <h3>¿Cómo Mejorar tu Concentración para Tener un Tiro Más Consistente?</h3>
+                <p class="blog-summary">La concentración es clave para lograr tiros más consistentes y precisos. Aprende cómo mejorar esta habilidad con técnicas prácticas...</p>
+                <button class="btn btn-link toggle-content">Leer más</button>
+                <div class="blog-content">
+                    <h4>¿Qué es la concentración y por qué es importante?</h4>
+                    <p>La concentración se define como la capacidad de mantener el foco en una tarea específica, bloqueando cualquier distracción. En el tiro con arco, esto significa poder centrarte en tu postura, respiración, alineación y suelta de la cuerda, sin dejar que otros pensamientos te afecten.</p>
+                    <h4>Técnicas para mejorar tu concentración</h4>
+                    <ul>
+                        <li><strong>Uso de palabras clave:</strong> Antes de cada tiro, repite una palabra o frase que te ayude a mantener el foco, como "respira" o "enfoca".</li>
+                        <li><strong>Visualización del tiro:</strong> Imagina el recorrido de la flecha desde la suelta hasta el impacto en el blanco. Visualiza cada paso con detalle.</li>
+                        <li><strong>Crea una rutina antes del tiro:</strong> Desarrolla una rutina previa al disparo que incluya ajustar tu postura y respirar profundamente para prepararte mentalmente.</li>
+                        <li><strong>Entrenamiento con distracciones:</strong> Practica en ambientes ruidosos o con música para simular condiciones de competencia y aprender a ignorar distracciones.</li>
+                    </ul>
+                    <h4>Beneficios de entrenar tu concentración</h4>
+                    <p>Mejorar tu concentración no solo incrementa tu precisión, sino que también aumenta tu confianza y reduce la ansiedad durante la competencia. Entrena tu mente tanto como tu cuerpo para obtener resultados óptimos.</p>
+                    <p>En Tiro con Arco Barrancas, ofrecemos asesoramiento personalizado y ejercicios prácticos para ayudarte a alcanzar tu máximo potencial. ¡Contáctanos para más información!</p>
+                </div>
+            </div>
+
+        </div>
     </section>
+
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
+
     <script>
         // Cargar header y footer
         async function loadPartial(id, url) {
@@ -30,18 +58,29 @@
         loadPartial("header-placeholder", "/partials/header.html");
         loadPartial("footer-placeholder", "/partials/footer.html");
     </script>
-    <div class="whatsapp-icon">
-        <a href="https://wa.me/5493515511900" target="_blank" class="btn btn-success" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="/imagenes/whatsapp-icon.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-right: 0px;">
-        </a>
-    </div>
     <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/insights/script.js"></script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los botones "Leer más"
+    const toggleButtons = document.querySelectorAll('.toggle-content');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Selecciona el siguiente elemento, que es el contenido del blog
+            const content = button.nextElementSibling;
+
+            // Alterna la visualización del contenido
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                button.textContent = 'Leer menos';
+            } else {
+                content.style.display = 'none';
+                button.textContent = 'Leer más';
+            }
+        });
+    });
+});
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

@@ -163,6 +163,57 @@ button.btn-primary:hover {
     border-color: #0056b3;
 }
 
+/* Estilos del Blog */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-card img{
+    width: 100%;
+}
+
+.blog-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-summary {
+    font-size: 1rem;
+    color: #555;
+}
+
+.blog-content {
+    display: none;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Botón para expandir el contenido */
+.toggle-content {
+    font-size: 0.9rem;
+    color: #007bff;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.toggle-content:hover {
+    text-decoration: underline;
+}
+
+
 /* Icono de WhatsApp */
 .whatsapp-icon {
     position: fixed;
@@ -202,6 +253,7 @@ button.btn-primary:hover {
     .info-barra-diagonal {
         font-size: 0.8rem;
     }
+
 }
 
 @media (max-width: 990px) {
@@ -212,4 +264,5 @@ button.btn-primary:hover {
     .info-barra-diagonal {
         font-size: 1rem;
     }
+  
 }
