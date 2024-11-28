@@ -29,4 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     cargarPrecioDesdeSheets('Pedidos!h4', 'producto-precio3');
     // FLechas 4.2
     cargarPrecioDesdeSheets('Pedidos!H11', 'producto-precio4');
+    //QD
+    cargarPrecioDesdeSheets('Pedidos!H15', 'producto-precio5');
 });
