@@ -244,6 +244,16 @@ button.btn-primary:hover {
     color: #ffc107;
 }
 
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-body img {
+  max-height: 250px;
+  object-fit: cover;
+}
+
 /* Media queries */
 @media (max-width: 600px) {
     .producto {

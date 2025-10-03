@@ -25,6 +25,26 @@
 <body>
     <div id="header-placeholder"></div>
  
+<!-- Modal de bienvenida -->
+<div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-labelledby="popupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title w-100" id="popupModalLabel">¡Bienvenido a Tiro con Arco Barrancas!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="/imagenes/popUp.png" alt="Bienvenida" class="img-fluid rounded mb-3">
+        <p>Se viene el Primer Curso de Iniciación en el Club LAS ROSAS</p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <section class="container mt-4 text-center">
         <h2>Bienvenido a Tiro con Arco Barranca</h2>
@@ -43,6 +63,13 @@
     </div>
      <!-- Footer -->
      <div id="footer-placeholder"></div>
+     <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Muestra el modal automáticamente al cargar la página
+    $('#popupModal').modal('show');
+  });
+        </script>
+
     <script>
         // Cargar header y footer
         async function loadPartial(id, url) {
